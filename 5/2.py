@@ -8,5 +8,5 @@ class Circle:
 
 circle = Circle(int(input("Введите радиус: ")))
 print(circle.get_radius())
-circle.set_radius(int(intput("Новый радиус: ")))
+circle.set_radius(int(input("Новый радиус: ")))
 print(circle.get_radius())
