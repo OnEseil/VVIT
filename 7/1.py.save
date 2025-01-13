@@ -34,11 +34,4 @@ class TechManager(Manager, Technician):
         self.employee_list.append(employee)
 
     def get_team_info(self):
-        return [employee.get_info() for employee in self.employee_list]
-
-emp = TechManager("Ivan", 1, "IT", "developer",[])
-
-print(emp.get_info())
-
-emp.add_employee(Employee("Danil", 5))
-emp.add_employee(Manager("Max", 19, "Test"))
+        return [em
