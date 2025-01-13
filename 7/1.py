@@ -1,34 +1,34 @@
 class Employee:
-    def __init__(self, employee_id, employee_name, *args):
-        self.id = employee_id
-        self.name = employee_name
+    def __init__(self, id, name, *args):
+        self.id = id
+        self.name = name
 
     def get_info(self):
         return self.__dict__
 
 
 class Manager(Employee):
-    def __init__(self, employee_id, employee_name, department, *args):
-        super().__init__(employee_id, employee_name, *args)
+    def __init__(self, id, name, department, *args):
+        super().__init__(id, name, *args)
         self.department = department
 
     def manage_project(self):
-        print(f"{self.name} performing management")
+        print(f"{self.name} - менеджер")
 
 
 class Technician(Employee):
-    def __init__(self, employee_id, employee_name, specialization, *args):
-        super().__init__(employee_id, employee_name, *args)
+    def __init__(self, id, name, specialization, *args):
+        super().__init__(id, name, *args)
         self.specialization = specialization
 
     def perform_maintenance(self):
-        print(f"{self.name} performing maintenance")
+        print(f"{self.name} выполняет техническое обслуживание")
 
 
 class TechManager(Manager, Technician):
-    def __init__(self, employee_id, employee_name, department, specialization, employee_list, *args):
-        super().__init__(employee_id, employee_name, department, specialization, *args)
-        self.employee_list = employee_list
+    def __init__(self, id, name, department, specialization, list, *args):
+        super().__init__(id, name, department, specialization, *args)
+        self.employee_list = list
 
     def add_employee(self, employee):
         self.employee_list.append(employee)
